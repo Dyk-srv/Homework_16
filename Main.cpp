@@ -68,11 +68,11 @@ int main() {
 	do {
 		copy_n /= 10;
 		length++;
-	} while (abs(copy_n));			// Проверка по модулю для отрицательных чисел
+	} while (copy_n);			
 	if (length == size3) {
 		std::cout << "\nЗаполненный массив:\n";
 		for (int i = 0; i < size3; i++) {
-			if (n < 0 && i > 0)
+			if (n < 0 && i > 0)			// Для 2-й и последующих цифр отрицательного числа
 				arr3[i] = abs(n / (int)pow(10, size3 - 1  - i) % 10);
 			else 
 				arr3[i] = n / (int)pow(10, size3 - 1 - i) % 10;
